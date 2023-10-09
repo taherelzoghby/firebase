@@ -1,4 +1,5 @@
 import 'package:firebase/core/consts/route.dart';
+import 'package:firebase/core/consts/strings.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -13,11 +14,11 @@ class HomeBody extends StatelessWidget {
         children: [
           ElevatedButton(
             onPressed: () => Get.toNamed(writePagePath),
-            child: const Text('write'),
+            child: const Text(Strings.write),
           ),
           ElevatedButton(
             onPressed: () => Get.toNamed(readPagePath),
-            child: const Text('read'),
+            child: const Text(Strings.read),
           ),
         ],
       ),

@@ -1,3 +1,4 @@
+import 'package:firebase/core/consts/strings.dart';
 import 'package:firebase/features/home/presentation/view/widgets/read_page_body.dart';
 import 'package:firebase/features/home/presentation/view_model/read_controller.dart';
 import 'package:flutter/material.dart';
@@ -21,7 +22,7 @@ class _ReadPageState extends State<ReadPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('read'),
+        title: const Text(Strings.read),
         centerTitle: true,
       ),
       body: const ReadPageBody(),

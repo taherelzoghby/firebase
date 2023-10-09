@@ -1,5 +1,7 @@
 import 'dart:io';
 
+import 'package:firebase/core/consts/assets.dart';
+import 'package:firebase/core/consts/strings.dart';
 import 'package:firebase/core/consts/style.dart';
 import 'package:firebase/core/widgets/customButton.dart';
 import 'package:firebase/core/widgets/text_field.dart';
@@ -18,17 +20,17 @@ class WritePageBody extends StatelessWidget {
       child: Column(
         children: [
           CustomTextField(
-            hint: 'car name',
+            hint: Strings.carName,
             onChanged: (String value) => controller.changeName(value),
           ),
           SizedBox(height: size.height * .01),
           CustomTextField(
-            hint: 'car model',
+            hint: Strings.carModel,
             onChanged: (String value) => controller.changeModel(value),
           ),
           SizedBox(height: size.height * .01),
           CustomTextField(
-            hint: 'car color',
+            hint: Strings.carColor,
             onChanged: (String value) => controller.changeColor(value),
           ),
           SizedBox(height: size.height * .01),
@@ -42,7 +44,7 @@ class WritePageBody extends StatelessWidget {
                 child: controller.image.value.isEmpty
                     ? Center(
                         child: Image.asset(
-                          'assets/images/photo.png',
+                          AppAssets.addImage,
                           fit: BoxFit.fill,
                         ),
                       )
@@ -54,7 +56,7 @@ class WritePageBody extends StatelessWidget {
           AspectRatio(
             aspectRatio: .5 / .07,
             child: CustomButton(
-              text: 'submit',
+              text: Strings.submit,
               onTap: () => controller.submit(),
             ),
           ),

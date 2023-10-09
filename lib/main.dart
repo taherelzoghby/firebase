@@ -1,4 +1,5 @@
 import 'package:firebase/core/consts/route.dart';
+import 'package:firebase/core/consts/strings.dart';
 import 'package:firebase/features/auth/presentation/view/sign_in.dart';
 import 'package:firebase/features/home/presentation/view/read_page.dart';
 import 'package:firebase/features/home/presentation/view/write_page.dart';
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      title: 'Flutter Demo',
+      title: Strings.appName,
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
